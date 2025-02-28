@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Needhi Bot</title>
+
+    <!-- Load CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+    <!-- Load JavaScript -->
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li>Search</li>
+                <li>Address</li>
+                <li>Speech</li>
+                <li>Tools</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <!-- Left Branding Section -->
+        <div class="left-section">
+            <div class="branding">
+                <img src="{% static 'images/bot.png' %}" alt="Needhi Logo" class="logo">
+                <h1>Needhi Bot</h1>
+            </div>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div id="chatbox">
+                <!-- Default Welcome Message -->
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <img src="{% static 'images/bot.png' %}" class="logo" alt="Logo">
+                        <span>Hi! I am Needhi. How may I assist you today?</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Box -->
+            <div class="input-container">
+                <form id="chat-form">
+                    {% csrf_token %}
+                    <input type="text" id="userInput" class="chat-input" placeholder="Ask us anything..." required>
+                    <button type="submit" id="sendBtn" class="send-button">Send</button>
+                </form>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer-like">
+                Copyright &copy; 2025 Needhi Bot
+            </div>
+        </div>  
+    </div>  
+
+</body>
+</html>

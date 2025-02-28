@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Needhi Bot</title>
+
+    <!-- Load CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+    <!-- Load JavaScript -->
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Needhi Bot</div>
+        <div class="chat-box" id="chat-box">
+            <div class="chat-message bot">
+                <img src="{% static 'images/bot.png' %}" alt="bot" class="bot-icon">
+                <p>Hi! I am Needhi. How may I assist you today?</p>
+            </div>
+            <div class="chat-message user">
+                <img src="{% static 'images/user.webp' %}" alt="user" class="user-icon">
+                <p>Hello! Can you give a brief note on BNS law?</p>
+            </div>
+        </div>
+
+        <!-- Chat Form for Sending Messages -->
+        <form id="chat-form" class="chat-input">
+            {% csrf_token %}
+            <input type="text" id="user-input" placeholder="Ask anything..." required>
+            <button type="submit" id="send-btn">
+                <img src="{% static 'images/send.png' %}" alt="Send" class="send-icon">
+            </button>
+        </form>
+    </div>
+</body>
+</html>

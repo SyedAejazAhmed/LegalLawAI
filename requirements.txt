@@ -1,0 +1,7 @@
+torch
+faiss-cpu  # Use 'faiss-gpu' if running on GPU
+sentence-transformers
+numpy
+jsonlines
+PyMuPDF
+ollama

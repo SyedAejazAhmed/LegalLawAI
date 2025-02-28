@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justicebot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Search</li>
+                <li>Address</li>
+                <li>Speech</li>
+                <li>Tools</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-container">
+        <div class="left-section">
+            <div class="branding">
+                <img src="img/bot.png" alt="AI Logo" class="logo">
+                <h1>Justicebot</h1>
+            </div>
+            <!-- Other left section content can go here -->
+        </div>
+        <div class="chat-container">
+            <div id="chatbox">
+                <div class="message user-message">How Are You?</div>
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <img src="img/bot.png" class="logo" alt="Logo">
+                        <span>Hello! How can i help you today?</span>
+                    </div>
+                </div>
+                <!-- Other messages -->
+            </div>
+            <div class="input-container">
+                <input type="text" id="userInput" class="chat-input" placeholder="Ask us anything...">
+                <button id="sendBtn" class="send-button">Send</button>
+            </div>
+            <div class="footer-like">
+                Copyright &copy; 2025 Justicebot
+            </div>
+        </div>        
+    </div>  
+    <script src="script.js"></script>
+</body>
+</html>
